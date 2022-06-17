@@ -5,7 +5,7 @@ This project utilizes image recognition software to capture hummingbirds. Artifi
 |:--:|:--:|:--:|:--:|
 | Sindu Sirigineni | Evergreen Valley High School | Environmental Engineering | Incoming Junior
 
-![Headstone Image](https://lh3.googleusercontent.com/WcZ3Q5aPr3O4W5JBhsYkbtSFderGtKDHPvYZyKRf92ktcIoxMHLy9s_7D4e93tOw2F0PViX5o6CzEsgJOvl-BBLecKXBy1dZhCDPxrUJ1vt09LcR-QBXwC0m7YVBUs0BJRmXIDiFkJDnCdwCulUJuE3yGvfmjpT9mBi0FCFr8zC8y5vUx8iZfKjggn0fGRErw0VH9fAcsB2NYWp0Nvhf-_PF6fu0T_9tauIyxd5epbzNpBOSy8Vo-GDWKFtEI3VsVZAZCLyzdp6s4ucyLlDpOn8mivmVArk3kn4Hcyp-TVulZfV6KMOT3jJFgpC04XjnqfhMk2bEJC1hY6kcThSrMH8TTz1L6CPgsPSdlpdGITrovfZdXzZ29hWhJOzHSw_Y72vgv8vwOWu-QQRZf2coFzx6u0HjP7YpokvjlGoVus_u6npJxSBpnpFEPTQe-GzuJoRxGbrhQ5uko1izegBUSdHtCmfb-177K3ePRlRBxSlQwozoVTyBIp2TAFOFyaMNoHUVyIvfDQBtAmPUtS9Wu2d0Qhzxv-og5P3xAPk2Saw01WPP4jFukizRTuUBwEwS8gjWenk4jQUlSxB04o_W3yBDz6gzIWU1TdaUg0fqLbP_qN7fNnVE4CtOGGO5sLVNklOO7k4wfg7GGrSEkhqmL_Y_ZFUYvWoFqLM2Aot5ElePugIAoCdqhLcNQrS_Xw6Vr2wlojiSqShzyABNtu9OB-6qx7FmYe83hLKzr3IekhR39Lgmm0SMrUBOnSd9=w1298-h1482-no?authuser=0)
+![Headstone Image][![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)]
   
 # Final Milestone
 My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint. 
