@@ -1,9 +1,9 @@
 ﻿# Machine Learning for Hummingbird Detection Camera
-This project utilizes image recognition software to capture hummingbirds. Artificial neural networks plus Python code are applied to hours worth of video footage to extract and concatinate clips that contain hummingbirds coming to a sugar-water feeder. 
+This project uses image recognition software to capture hummingbirds. Artificial neural networks plus Python code are applied to hours of video footage to extract and concatenate clips containing hummingbirds coming to a sugar-water feeder. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Sindu Sirigineni | Evergreen Valley High School | Environmental Engineering | Incoming Junior
+| Sindu Sirigineni | Evergreen Valley High School | Environmental/Software Engineering | Incoming Junior
 
 ![Headstone Image][![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)]
   
