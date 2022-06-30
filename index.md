@@ -20,6 +20,8 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
   
 
 My first milestone was to complete the software portion of the project. I imported code from the original project and configured it for my project. The troubleshooting process took most of the second week and continued into the third. I imported a variety of tools to run my code, such as Tensorflow(an ML/AI library), ResNet(a residual learning network), the Matlab environment(to use a ground truth labeler), and Matplotlib(a Python plotting library), among other applications. I debugged the code and made sure it was free of errors, customized some code for ground truth labeling the images and generating plots, and also imported and debugged a separate code to split video footage into separate frames and save the frames as images. Overall, this is the purpose of the code: the video is turned into frames, where the ResNet network is applied to calculate the likelihood of a hummingbird being in the image. The image is cropped and resized, and the code also allows the ResNet to only run on specific sections of the image to make it more accurate. I created ground truth labels to improve the accuracy of the predictions, then finally I plotted the predictions that the images contained hummingbirds in a scatter plot.
+
+## hummingbird.py
 ```markdown
 ### Code to detect whether an image contains any hummingbirds. It also includes an evaluation snippet.
 import ssl
@@ -98,6 +100,7 @@ plt.scatter(falseXList, falseYList, color='red')
 plt.scatter(trueXList, trueYList, color='green')
 plt.show()
 ```
+## pics.py
 ```markdown
 ### Code to split video footage into frames and save the separate frames as images.
 import cv2
