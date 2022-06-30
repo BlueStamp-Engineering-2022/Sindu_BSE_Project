@@ -161,7 +161,21 @@ plt.show()
 # Starter Project
   
 
-My starter project is the customizable Arduino project, in which I used the Piezo buzzer as my output. The Piezo buzzer plays various tones at different frequencies to create a song. The materials I used are: an Arduino Uno microboard, an Arduino Proto Shield, two jumper wires, and a Piezo buzzer. First, I soldered on three headers to the Proto Shield. Using these headers, I was able to connect the Proto Shield and the Uno. Now that the two components were connected, I built my circuit: I connected one jumper wire from the positive side of the Piezo buzzer to pin 9 on the Proto Shield, and another wire from the negative side to the ground pin(GND). I then connected the Arduino Uno to my laptop using a USB cable. The project came with Arduino code, which: corresponded frequencies to note characters, defined the song length, defined the note sequence and their corresponding beats, the tempo, and included other loops and functions to play the song. I imported it and ran the code, and the buzzer played a simple melody. Afterwards, I experimented with changing the code to play different songs by tweaking the note sequence, song length, and beats.
+My starter project is the customizable Arduino project, in which I used the Piezo buzzer as my output. The Piezo buzzer plays various tones at different frequencies to create a song. The materials I used are:
+* an Arduino Uno microboard
+* an Arduino Proto Shield
+* two jumper wires
+* a Piezo buzzer
+* solder & a soldering iron
+
+This is my procedure:
+1. First, I soldered on three headers to the Arduino Proto Shield.
+2. Using these headers, I was able to connect the Proto Shield and the Uno by sliding the headers together.
+3. Now that the two components were connected, I built my circuit: I connected one jumper wire from the positive side of the Piezo buzzer to pin 9 on the Proto Shield, and another wire from the negative side to the ground pin(GND).
+4. I then connected the Arduino Uno to my laptop using a USB cable.
+	* The project came with Arduino code, which: corresponded frequencies to note characters, defined the song length, defined the note sequence and their corresponding beats, the tempo, and included other loops and functions to play the song.
+6. I imported it and ran the code, and the buzzer played a simple melody.
+7. Afterwards, I experimented with changing the code to play different songs by tweaking the note sequence, song length, and beats.
 
 
 [![First Milestone](http://i3.ytimg.com/vi/wGRu2dGmE5Q/hqdefault.jpg)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "First Milestone"){:target="_blank" rel="noopener"}
