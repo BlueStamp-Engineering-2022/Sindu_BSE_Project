@@ -20,10 +20,10 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
   
 
 My first milestone was to complete the software portion of the project. I imported code from the original project and configured it for my project. The troubleshooting process took most of the second week and continued into the third. I imported a variety of tools to run my code, such as Tensorflow(an ML/AI library), ResNet(a residual learning network), the Matlab environment(to use a ground truth labeler), and Matplotlib(a Python plotting library), among other applications. I debugged the code and made sure it was free of errors, customized some code for ground truth labeling the images and generating plots, and also imported and debugged a separate code to split video footage into separate frames and save the frames as images. Overall, this is the purpose of the code:
-- [x] pics.py file:
+- [x] **pics.py** file:
 	- [x] Splits the video up into separate frames.
 	- [x] Creates a folder, saves the images and puts them all in the folder.
-- [x] hummingbird.py file:
+- [x] **hummingbird.py** file:
 	- [x] Creates a subroutine to make a prediction of the likelihood that there is a hummingbird.
 	- [x] Crops and resizes the images so that ResNet can be ran on them.
 	- [x] The code constrains the program to run on specific areas of the image to make it more accurate.
@@ -32,7 +32,7 @@ My first milestone was to complete the software portion of the project. I import
 	- [x] Finally, plots the predictions that the images contained hummingbirds in a scatter plot.
 
 ## pics.py
-```markdown
+```python3
 ### Code to split video footage into frames and save the separate frames as images.
 import cv2
 import os
@@ -77,7 +77,7 @@ cam.release()
 ```
 
 ## hummingbird.py
-```markdown
+```python3
 ### Code to detect whether an image contains any hummingbirds. It also includes an evaluation snippet.
 import ssl
 
