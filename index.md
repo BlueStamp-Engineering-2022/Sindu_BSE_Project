@@ -1,4 +1,4 @@
-﻿# Machine Learning for Hummingbird Detection Camera
+﻿# Machine Learning for Hummingbird Detection Camera :camera:
 This project uses image recognition software to capture hummingbirds. Artificial neural networks plus Python code are applied to hours of video footage to extract and concatenate clips containing hummingbirds coming to a sugar-water feeder. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
@@ -7,19 +7,74 @@ This project uses image recognition software to capture hummingbirds. Artificial
 
 ![Headstone Image][![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)]
   
-# Final Milestone
+# :three: Final Milestone
 My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint. 
 
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
-# Second Milestone
+# :two: Second Milestone
 My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint.
 
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
-# First Milestone
+# :one: First Milestone
   
 
-My first milestone was to complete the software portion of the project. I imported code from the original project and configured it for my project. The troubleshooting process took most of the second week and continued into the third. I imported a variety of tools to run my code, such as Tensorflow(an ML/AI library), ResNet(a residual learning network), the Matlab environment(to use a ground truth labeler), and Matplotlib(a Python plotting library), among other applications. I debugged the code and made sure it was free of errors, customized some code for ground truth labeling the images and generating plots, and also imported and debugged a separate code to split video footage into separate frames and save the frames as images. Overall, this is the purpose of the code: the video is turned into frames, where the ResNet network is applied to calculate the likelihood of a hummingbird being in the image. The image is cropped and resized, and the code also allows the ResNet to only run on specific sections of the image to make it more accurate. I created ground truth labels to improve the accuracy of the predictions, then finally I plotted the predictions that the images contained hummingbirds in a scatter plot.
+My first milestone was to complete the software portion of the project. I imported code from the original project and configured it for my project. The troubleshooting process took most of the second week and continued into the third. I imported a variety of tools to run my code, such as Tensorflow(an ML/AI library), ResNet(a residual learning network), the Matlab environment(to use a ground truth labeler), and Matplotlib(a Python plotting library), among other applications. I debugged the code and made sure it was free of errors, customized some code for ground truth labeling the images and generating plots, and also imported and debugged a separate code to split video footage into separate frames and save the frames as images. Overall, this is the purpose of the code:
+- [x] pics.py file:
+	- [x] Splits the video up into separate frames.
+	- [x] Creates a folder, saves the images and puts them all in the folder.
+- [x] hummingbird.py file:
+	- [x] Creates a subroutine to make a prediction of the likelihood that there is a hummingbird.
+	- [x] Crops and resizes the images so that ResNet can be ran on them.
+	- [x] The code constrains the program to run on specific areas of the image to make it more accurate.
+	- [x] The ResNet network is applied to the frames to calculate the likelihood of a hummingbird being in the image.
+	- [x] Ground truth labels created to compare the results to ground truths and thus improve the accuracy of the predictions.
+	- [x] Finally, plots the predictions that the images contained hummingbirds in a scatter plot.
+
+## pics.py
+```markdown
+### Code to split video footage into frames and save the separate frames as images.
+import cv2
+import os
+
+# Opens up a video file from the computer.
+cam = cv2.VideoCapture("VID_20220401_114955_LS.mp4")
+
+try:
+      
+    # creating a folder named data
+    if not os.path.exists('data'):
+        os.makedirs('data')
+  
+# if not created then raise error
+except OSError:
+    print ('Error: Creating directory of data')
+  
+# frame
+currentframe = 0
+  
+while(True):
+      
+    # reading from frame
+    ret,frame = cam.read()
+  
+    if ret:
+        # if video is still left continue creating images
+        name = './data/frame' + str(currentframe) + '.jpg'
+        print ('Creating...' + name)
+
+        # writing the extracted images
+        cv2.imwrite(name, frame)
+  
+        # increasing counter so that it will
+        # show how many frames are created
+        currentframe += 1
+    else:
+        break
+  
+cam.release()
+#cv2.destroyAllWindows()
+```
 
 ## hummingbird.py
 ```markdown
@@ -100,51 +155,7 @@ plt.scatter(falseXList, falseYList, color='red')
 plt.scatter(trueXList, trueYList, color='green')
 plt.show()
 ```
-## pics.py
-```markdown
-### Code to split video footage into frames and save the separate frames as images.
-import cv2
-import os
 
-# Opens the inbuilt camera of laptop to capture video.
-cam = cv2.VideoCapture("VID_20220401_114955_LS.mp4")
-#cam = cv2.VideoCapture("C:\\Users\\school\\Desktop\\summer\\bse\\VID_20220401_114955_LS.mp4")
-
-try:
-      
-    # creating a folder named data
-    if not os.path.exists('data'):
-        os.makedirs('data')
-  
-# if not created then raise error
-except OSError:
-    print ('Error: Creating directory of data')
-  
-# frame
-currentframe = 0
-  
-while(True):
-      
-    # reading from frame
-    ret,frame = cam.read()
-  
-    if ret:
-        # if video is still left continue creating images
-        name = './data/frame' + str(currentframe) + '.jpg'
-        print ('Creating...' + name)
-
-        # writing the extracted images
-        cv2.imwrite(name, frame)
-  
-        # increasing counter so that it will
-        # show how many frames are created
-        currentframe += 1
-    else:
-        break
-  
-cam.release()
-#cv2.destroyAllWindows()
-```
 [![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574117/video_to_markdown/images/youtube--CaCazFBhYKs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=CaCazFBhYKs "First Milestone"){:target="_blank" rel="noopener"}
 
 # Starter Project
