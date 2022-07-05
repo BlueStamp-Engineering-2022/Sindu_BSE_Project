@@ -13,11 +13,23 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
 # :two: Second Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint.
+My second milestone was the hardware portion of the project. This aspect was relatively simple, and surprisingly, the most difficult part of this portion was to get hummingbirds to come to my feeder. The materials I used were:
+* a hummingbird feeder
+* a small, high-quality camera (the REMALI 4K Ultra HD Sports Action Camera)
+* a 3D-printed camera mount
+* thick string
+* nuts & bolts (2)
+
+Here is a picture of the contraption:
 
 ![Hummingbird Feeder](https://i.postimg.cc/7Z3q1ygv/PXL-20220629-144850089.jpg "Hummingbird Feeder")
 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
+Putting together the feeder-camera-mount contraption was very straightforward: I inserted long nuts & bolts to connect both parts of the 3D-printed camera mount, and this proved to be better, as I was able to adjust how high up the feeder I wanted to hang the camera. The camera mount had a slot where I was just able to slide in the camera. Despite this part being relatively simple, I did run into several problems:
+- [x] The camera had several issues, such as running out of battery quickly, limited storage, and cutting up video clips. We eventually figured it out and the camera functioned fine.
+- [x] My feeder became overrun by ants, so I had to take it down and thoroughly clean it. I considered sticking it in the middle of our bird bath, so it would act as a moat, but I eventually figured out that I could fill the red lid at the top with water, which was very effective to keep the ants out.
+- [] Lastly, the most serious but most unexpected problem: hummingbirds wouldn't come to my feeder! This I didn't expect, as hummingbirds are regulars to the many hollyhocks (one of their favorite flowers) in our backyard, but they somehow wouldn't near the feeder, despite it being bright red (a color that attracts them easily). I experimented with various locations around my backyard, eventually sticking the feeder right next to a giant, bright-red hollyhock. (as of 7/5/22, still no hbs yet).
+
+[![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
 # :one: First Milestone
   
 
@@ -180,4 +192,4 @@ This is my procedure:
 7. Afterwards, I experimented with changing the code to play different songs by tweaking the note sequence, song length, and beats.
 
 
-[![First Milestone](http://i3.ytimg.com/vi/wGRu2dGmE5Q/hqdefault.jpg)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "First Milestone"){:target="_blank" rel="noopener"}
+[![Starter Project](http://i3.ytimg.com/vi/wGRu2dGmE5Q/hqdefault.jpg)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "First Milestone"){:target="_blank" rel="noopener"}
