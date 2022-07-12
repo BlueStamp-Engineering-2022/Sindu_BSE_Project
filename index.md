@@ -192,4 +192,4 @@ This is my procedure:
 7. Afterwards, I experimented with changing the code to play different songs by tweaking the note sequence, song length, and beats.
 
 
-[![Starter Project](http://i3.ytimg.com/vi/wGRu2dGmE5Q/hqdefault.jpg)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "First Milestone"){:target="_blank" rel="noopener"}
+[![Starter Project](https://i.postimg.cc/t4JMjSXS/Screen-Shot-2022-07-12-at-10-00-16-AM.png)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "First Milestone"){:target="_blank" rel="noopener"}
