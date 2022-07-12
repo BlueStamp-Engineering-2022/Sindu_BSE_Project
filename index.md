@@ -1,4 +1,4 @@
-﻿# Machine Learning for Hummingbird Detection Camera
+﻿# Machine Learning for Hummingbird Detection Camera 📷
 This project uses image recognition software to capture hummingbirds. Artificial neural networks plus Python code are applied to hours of video footage to extract and concatenate clips containing hummingbirds coming to a sugar-water feeder. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
@@ -27,7 +27,7 @@ Here is a picture of the contraption:
 Putting together the feeder-camera-mount contraption was very straightforward: I inserted long nuts & bolts to connect both parts of the 3D-printed camera mount, and this proved to be better, as I was able to adjust how high up the feeder I wanted to hang the camera. The camera mount had a slot where I was just able to slide in the camera. Despite this part being relatively simple, I did run into several problems:
 - [x] The camera had several issues, such as running out of battery quickly, limited storage, and cutting up video clips. We eventually figured it out and the camera functioned fine.
 - [x] My feeder became overrun by ants, so I had to take it down and thoroughly clean it. I considered sticking it in the middle of our bird bath, so it would act as a moat, but I eventually figured out that I could fill the red lid at the top with water, which was very effective to keep the ants out.
-- [] Lastly, the most serious but most unexpected problem: hummingbirds wouldn't come to my feeder! This I didn't expect, as hummingbirds are regulars to the many hollyhocks (one of their favorite flowers) in our backyard, but they somehow wouldn't near the feeder, despite it being bright red (a color that attracts them easily). I experimented with various locations around my backyard, eventually sticking the feeder right next to a giant, bright-red hollyhock. (as of 7/5/22, still no hbs yet).
+- [x] Lastly, the most serious but most unexpected problem: hummingbirds wouldn't come to my feeder! This I didn't expect, as hummingbirds are regulars to the many hollyhocks (one of their favorite flowers) in our backyard, but they somehow wouldn't come near the feeder, despite it being bright red (a color that attracts them easily). I experimented with various locations around my backyard, and eventually several hummingbirds arrived.
 
 [![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
 # First Milestone
