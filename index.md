@@ -7,12 +7,12 @@ This project uses image recognition software to capture hummingbirds. Artificial
 
 ![Headstone Image][![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)]
   
-# Final Milestone
+# 3️⃣ Final Milestone
 My final milestone was taking the footage I captured in my backyard and running the code and ResNet on the footage. We had some issues with the ground truth labeling, running the ResNet on long videos, saving frames without draining storage, and some others. We changed a lot of aspects of the code, removed sections, and added new code. Eventually, we were able to run the ResNet and code on several videos and get results. Since the videos were very long, we changed the code to save only two frames per second instead of 120, like the standard setting, which would have completely drained my computer’s storage. Each image was given a likelihood percentage that it contained a hummingbird, as predicted by the ResNet. (However, the ResNet did end up not being completely accurate, giving several inaccurate predictions for the hummingbirds.) We then worked on concatenating the clips that did contain hummingbirds, and gave requirements to end a clip when the probability became too low, meaning there was no longer a hummingbird. We ended up cutting out the ground truth labeling and plotting code, as we ran into some problems and couldn’t change it to work with my project. 
 
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
-# Second Milestone
+# 2️⃣ Second Milestone
 My second milestone was the hardware portion of the project. This aspect was relatively simple, and surprisingly, the most difficult part of this portion was to get hummingbirds to come to my feeder. The materials I used were:
 * a hummingbird feeder
 * a small, high-quality camera (the REMALI 4K Ultra HD Sports Action Camera)
@@ -30,7 +30,7 @@ Putting together the feeder-camera-mount contraption was very straightforward: I
 -  [x] Lastly, the most serious but most unexpected problem: hummingbirds wouldn't come to my feeder! This I didn't expect, as hummingbirds are regulars to the many hollyhocks (one of their favorite flowers) in our backyard, but they somehow wouldn't come near the feeder, despite it being bright red (a color that attracts them easily). I experimented with various locations around my backyard, and eventually several hummingbirds arrived.
 
 [![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
-# First Milestone
+# 1️⃣ First Milestone
   
 
 My first milestone was to complete the software portion of the project. I imported code from the original project and configured it for my project. The troubleshooting process took most of the second week and continued into the third. I imported a variety of tools to run my code, such as Tensorflow(an ML/AI library), ResNet(a residual learning network), the Matlab environment(to use a ground truth labeler), and Matplotlib(a Python plotting library), among other applications. I debugged the code and made sure it was free of errors, customized some code for ground truth labeling the images and generating plots, and also imported and debugged a separate code to split video footage into separate frames and save the frames as images. Overall, this is the purpose of the code:
