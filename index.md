@@ -34,7 +34,7 @@ Putting together the feeder-camera-mount contraption was very straightforward: I
 -  [x] My feeder became overrun by ants, so I had to take it down and thoroughly clean it. I considered sticking it in the middle of our bird bath, so it would act as a moat, but I eventually figured out that I could fill the red lid at the top with water, which was very effective to keep the ants out.
 -  [x] Lastly, the most serious but most unexpected problem: hummingbirds wouldn't come to my feeder! This I didn't expect, as hummingbirds are regulars to the many hollyhocks (one of their favorite flowers) in our backyard, but they somehow wouldn't come near the feeder, despite it being bright red (a color that attracts them easily). I experimented with various locations around my backyard, and eventually several hummingbirds arrived.
 
-[![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
+[![Second Milestone](https://i.postimg.cc/zXr2rzQ9/Screen-Shot-2022-07-13-at-12-20-53-PM.png)](https://www.youtube.com/watch?v=Otlkn02Y1I0 "Second Milestone"){:target="_blank" rel="noopener"}
 # 1️⃣ First Milestone
   
 
