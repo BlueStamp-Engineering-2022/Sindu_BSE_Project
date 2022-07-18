@@ -11,7 +11,7 @@ This project uses image recognition software to capture hummingbirds. Artificial
 My final milestone was taking the footage I captured in my backyard and running the code and ResNet on the footage. We had some issues with the ground truth labeling, running the ResNet on long videos, saving frames without draining storage, and some others. We changed a lot of aspects of the code, removed sections, and added new code. Eventually, we were able to run the ResNet and code on several videos and get results. Since the videos were very long, we changed the code to save only two frames per second instead of 120, like the standard setting, which would have completely drained my computer’s storage. Each image was given a likelihood percentage that it contained a hummingbird, as predicted by the ResNet. (However, the ResNet did end up not being completely accurate, giving several inaccurate predictions for the hummingbirds.) We then worked on concatenating the clips that did contain hummingbirds, and gave requirements to end a clip when the probability became too low, meaning there was no longer a hummingbird. We ended up cutting out the ground truth labeling and plotting code, as we ran into some problems and couldn’t change it to work with my project. 
 
 ## hummingbird.py (updated)
-```python3
+```python
 ### Code to detect whether an image contains any hummingbirds.
 import ssl
 import os
@@ -137,7 +137,7 @@ My first milestone was to complete the software portion of the project. I import
 	- [x] Finally, plots the predictions that the images contained hummingbirds in a scatter plot.
 
 ## pics.py
-```python3
+```python
 ### Code to split video footage into frames and save the separate frames as images.
 import cv2
 import os
@@ -182,7 +182,7 @@ cam.release()
 ```
 
 ## hummingbird.py
-```python3
+```python
 ### Code to detect whether an image contains any hummingbirds. It also includes an evaluation snippet.
 import ssl
 
