@@ -101,7 +101,7 @@ video.write_videofile('combined2.mp4')
 print("All files successfully combined")
 ```
 
-[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone")
+[![Final Milestone](https://i.postimg.cc/x8F55dZz/Screen-Shot-2022-07-18-at-10-00-44-AM.png)](https://www.youtube.com/watch?v=EHuZAmJC9qU "Final Milestone")
 
 # 2️⃣ Second Milestone
 My second milestone was the hardware portion of the project. This aspect was relatively simple, and surprisingly, the most difficult part of this portion was to get hummingbirds to come to my feeder. The materials I used were:
