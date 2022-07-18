@@ -5,7 +5,7 @@ This project uses image recognition software to capture hummingbirds. Artificial
 |:--:|:--:|:--:|:--:|
 | Sindu Sirigineni | Evergreen Valley High School | Environmental/Software Engineering | Incoming Junior
 
-![Headstone Image][![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)]
+![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)
   
 # 3️⃣ Final Milestone
 My final milestone was taking the footage I captured in my backyard and running the code and ResNet on the footage. We had some issues with the ground truth labeling, running the ResNet on long videos, saving frames without draining storage, and some others. We changed a lot of aspects of the code, removed sections, and added new code. Eventually, we were able to run the ResNet and code on several videos and get results. Since the videos were very long, we changed the code to save only two frames per second instead of 120, like the standard setting, which would have completely drained my computer’s storage. Each image was given a likelihood percentage that it contained a hummingbird, as predicted by the ResNet. (However, the ResNet did end up not being completely accurate, giving several inaccurate predictions for the hummingbirds.) We then worked on concatenating the clips that did contain hummingbirds, and gave requirements to end a clip when the probability became too low, meaning there was no longer a hummingbird. We ended up cutting out the ground truth labeling and plotting code, as we ran into some problems and couldn’t change it to work with my project. 
@@ -101,7 +101,7 @@ video.write_videofile('combined2.mp4')
 print("All files successfully combined")
 ```
 
-[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
+[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone")
 
 # 2️⃣ Second Milestone
 My second milestone was the hardware portion of the project. This aspect was relatively simple, and surprisingly, the most difficult part of this portion was to get hummingbirds to come to my feeder. The materials I used were:
@@ -120,7 +120,7 @@ Putting together the feeder-camera-mount contraption was very straightforward: I
 -  [x] My feeder became overrun by ants, so I had to take it down and thoroughly clean it. I considered sticking it in the middle of our bird bath, so it would act as a moat, but I eventually figured out that I could fill the red lid at the top with water, which was very effective to keep the ants out.
 -  [x] Lastly, the most serious but most unexpected problem: hummingbirds wouldn't come to my feeder! This I didn't expect, as hummingbirds are regulars to the many hollyhocks (one of their favorite flowers) in our backyard, but they somehow wouldn't come near the feeder, despite it being bright red (a color that attracts them easily). I experimented with various locations around my backyard, and eventually several hummingbirds arrived.
 
-[![Second Milestone](https://i.postimg.cc/zXr2rzQ9/Screen-Shot-2022-07-13-at-12-20-53-PM.png)](https://www.youtube.com/watch?v=Otlkn02Y1I0 "Second Milestone"){:target="_blank" rel="noopener"}
+[![Second Milestone](https://i.postimg.cc/zXr2rzQ9/Screen-Shot-2022-07-13-at-12-20-53-PM.png)](https://www.youtube.com/watch?v=Otlkn02Y1I0 "Second Milestone")
 # 1️⃣ First Milestone
   
 
@@ -261,7 +261,7 @@ plt.scatter(trueXList, trueYList, color='green')
 plt.show()
 ```
 
-[![First Milestone](https://i.postimg.cc/bJk0PbDF/Screen-Shot-2022-07-12-at-9-55-04-AM.png)](https://youtu.be/W-9AAI5Y_1E "First Milestone"){:target="_blank" rel="noopener"}
+[![First Milestone](https://i.postimg.cc/bJk0PbDF/Screen-Shot-2022-07-12-at-9-55-04-AM.png)](https://youtu.be/W-9AAI5Y_1E "First Milestone")
 
 # Starter Project
   
@@ -283,4 +283,4 @@ This is my procedure:
 7. Afterwards, I experimented with changing the code to play different songs by tweaking the note sequence, song length, and beats.
 
 
-[![Starter Project](https://i.postimg.cc/t4JMjSXS/Screen-Shot-2022-07-12-at-10-00-16-AM.png)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "Starter Project"){:target="_blank" rel="noopener"}
+[![Starter Project](https://i.postimg.cc/t4JMjSXS/Screen-Shot-2022-07-12-at-10-00-16-AM.png)](https://www.youtube.com/watch?v=wGRu2dGmE5Q "Starter Project")
