@@ -10,9 +10,95 @@ This project uses image recognition software to capture hummingbirds. Artificial
 # 3️⃣ Final Milestone
 My final milestone was taking the footage I captured in my backyard and running the code and ResNet on the footage. We had some issues with the ground truth labeling, running the ResNet on long videos, saving frames without draining storage, and some others. We changed a lot of aspects of the code, removed sections, and added new code. Eventually, we were able to run the ResNet and code on several videos and get results. Since the videos were very long, we changed the code to save only two frames per second instead of 120, like the standard setting, which would have completely drained my computer’s storage. Each image was given a likelihood percentage that it contained a hummingbird, as predicted by the ResNet. (However, the ResNet did end up not being completely accurate, giving several inaccurate predictions for the hummingbirds.) We then worked on concatenating the clips that did contain hummingbirds, and gave requirements to end a clip when the probability became too low, meaning there was no longer a hummingbird. We ended up cutting out the ground truth labeling and plotting code, as we ran into some problems and couldn’t change it to work with my project. 
 
-## hummingbird.py
+## hummingbird.py (updated)
 ```python3
-updated code
+### Code to detect whether an image contains any hummingbirds.
+import ssl
+import os
+
+ssl._create_default_https_context = ssl._create_unverified_context
+from tensorflow.keras.applications.resnet50 import ResNet50
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
+from moviepy.editor import *
+from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+### Subroutine to calculate likelihood for hummingbird in an image
+def calculateLikelihood(x):
+	x = np.expand_dims(x, axis=0)
+	x = preprocess_input(x)
+	preds = model.predict(x)
+	# The class index for hummingbird is 94 in ImageNet.
+	return preds[0][94]
+
+def concatter(t1, t2, i):
+	os.environ["FFMPEG_BINARY"] = "/usr/local/bin/ffmpeg"
+	# looping through the cropped videos
+	ffmpeg_extract_subclip("crop1.mov", t1, t2, targetname="hum_clip{}.mp4".format(i))
+	print("subclip made!!")
+
+
+### Load model and define parameters
+model = ResNet50(weights='imagenet')
+dim = 350
+height = 720
+width = 1280
+expecteddim = 224
+data = []
+i = 1
+t1 = 0
+t2 = 0
+concat = True
+clips = []
+# change based on number of frames
+N = 72
+### Loop through the images
+for n in range(1, N):
+	# Read the image
+	# FIX REGEX
+	name = 'frame{}.jpg'.format(n)
+	img_path = name
+	img = image.load_img(img_path)
+	# Crop the image, resize it and make prediction
+	startx = 280
+	starty = 500
+	endx = startx + dim
+	endy = starty + dim
+	cropped_img = img.crop((startx, starty, endx, endy))
+	resize_img = cropped_img.resize((expecteddim, expecteddim), Image.ANTIALIAS)
+	x = image.img_to_array(resize_img)
+	p1 = calculateLikelihood(x)
+	# Repeat above but close to another flower
+	startx = width - dim
+	starty = 0
+	endx = startx + dim
+	endy = starty + dim
+	cropped_img = img.crop((startx, starty, endx, endy))
+	resize_img = cropped_img.resize((expecteddim, expecteddim), Image.ANTIALIAS)
+	x = image.img_to_array(resize_img)
+	p2 = calculateLikelihood(x)
+	# Take the maximum likelihood as the return likelihood
+	print(name, max(p1, p2))
+	#data.append(max(p1, p2))
+	time_stamp = n*.5 #one frame/two seconds
+	data.append([name, time_stamp, max(p1,p2)])
+	if (max(p1,p2) >= .5):
+		t1 = data[n-1][1]
+		concat = True
+	if (max(p1, p2) <= .3) and concat == True:
+		t2 = data[n-1][1]
+		concatter(t1, t2, i)
+		i+=1
+		concat = False
+for filename in [ 'hum_clip1.mp4','hum_clip2.mp4', 'hum_clip3.mp4' ]:
+ 	clips.append(VideoFileClip(filename))
+
+video = concatenate_videoclips(clips, method='compose')
+video.write_videofile('combined2.mp4')
+print("All files successfully combined")
 ```
 
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
