@@ -94,7 +94,7 @@ for n in range(1, num_of_frames+1):
 	#data.append(max(p1, p2))
 	time_stamp = n*.5 #one frame/two seconds
 	data.append([name, time_stamp, max(p1,p2)])
-	if (max(p1,p2) >= .5 and concat == False): #new (add entire section from here until end, delete prev section in its place)
+	if (max(p1,p2) >= .5 and concat == False):
 		t1 = n-1
 		concat = True
 		#print(t1)
