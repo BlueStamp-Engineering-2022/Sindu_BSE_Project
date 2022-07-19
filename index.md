@@ -15,6 +15,7 @@ My final milestone was taking the footage I captured in my backyard and running 
 ### Code to detect whether an image contains any hummingbirds.
 import ssl
 import os
+import cv2
 
 ssl._create_default_https_context = ssl._create_unverified_context
 from tensorflow.keras.applications.resnet50 import ResNet50
@@ -34,37 +35,45 @@ def calculateLikelihood(x):
 	# The class index for hummingbird is 94 in ImageNet.
 	return preds[0][94]
 
-def concatter(t1, t2, i):
+def extract(t1, t2, i):
 	os.environ["FFMPEG_BINARY"] = "/usr/local/bin/ffmpeg"
 	# looping through the cropped videos
 	ffmpeg_extract_subclip("crop1.mov", t1, t2, targetname="hum_clip{}.mp4".format(i))
 	print("subclip made!!")
 
+def concatter(i):
+	# creating an array with each hum_clip
+	for x in range (1, i):
+		sub_clips.append("hum_clip{}.mp4".format(x))
+	for name in sub_clips:
+		clips.append(VideoFileClip(name))
+	video = concatenate_videoclips(clips, method='compose')
+	video.write_videofile('compilation.mp4')
+	print("All files successfully combined. Consider your intensive project complete!")
 
 ### Load model and define parameters
 model = ResNet50(weights='imagenet')
-dim = 350
+dim = 300
 height = 720
 width = 1280
 expecteddim = 224
-data = []
 i = 1
 t1 = 0
 t2 = 0
-concat = True
+concat = False
 clips = []
+sub_clips = []
 # change based on number of frames
-N = 72
+num_of_frames = 263
 ### Loop through the images
-for n in range(1, N):
+for n in range(1, num_of_frames+1):
 	# Read the image
-	# FIX REGEX
 	name = 'frame{}.jpg'.format(n)
 	img_path = name
 	img = image.load_img(img_path)
 	# Crop the image, resize it and make prediction
-	startx = 280
-	starty = 500
+	startx = 300
+	starty = 125
 	endx = startx + dim
 	endy = starty + dim
 	cropped_img = img.crop((startx, starty, endx, endy))
@@ -72,8 +81,8 @@ for n in range(1, N):
 	x = image.img_to_array(resize_img)
 	p1 = calculateLikelihood(x)
 	# Repeat above but close to another flower
-	startx = width - dim
-	starty = 0
+	startx = 925
+	starty = 25
 	endx = startx + dim
 	endy = starty + dim
 	cropped_img = img.crop((startx, starty, endx, endy))
@@ -85,20 +94,18 @@ for n in range(1, N):
 	#data.append(max(p1, p2))
 	time_stamp = n*.5 #one frame/two seconds
 	data.append([name, time_stamp, max(p1,p2)])
-	if (max(p1,p2) >= .5):
-		t1 = data[n-1][1]
+	if (max(p1,p2) >= .5 and concat == False): #new (add entire section from here until end, delete prev section in its place)
+		t1 = n-1
 		concat = True
-	if (max(p1, p2) <= .3) and concat == True:
-		t2 = data[n-1][1]
-		concatter(t1, t2, i)
+		#print(t1)
+	if (max(p1, p2) <= .1 and concat == True):
+		t2 = n-1
+		extract(t1, t2, i)
 		i+=1
+		#print(t2)
 		concat = False
-for filename in [ 'hum_clip1.mp4','hum_clip2.mp4', 'hum_clip3.mp4' ]:
- 	clips.append(VideoFileClip(filename))
 
-video = concatenate_videoclips(clips, method='compose')
-video.write_videofile('combined2.mp4')
-print("All files successfully combined")
+concatter(i)
 ```
 
 [![Final Milestone](https://i.postimg.cc/x8F55dZz/Screen-Shot-2022-07-18-at-10-00-44-AM.png)](https://www.youtube.com/watch?v=EHuZAmJC9qU "Final Milestone")
