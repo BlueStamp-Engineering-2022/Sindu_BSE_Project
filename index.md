@@ -3,7 +3,7 @@ This project uses image recognition software to capture hummingbirds. Artificial
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Sindu Sirigineni | Evergreen Valley High School | Environmental/Software Engineering | Incoming Junior
+| Sindu | Evergreen Valley High School | Environmental/Software Engineering | Incoming Junior
 
 ![IMG-3396-1-1.jpg](https://i.postimg.cc/d10kF0bp/IMG-3396-1-1.jpg)
   
