@@ -107,6 +107,8 @@ for n in range(1, num_of_frames+1):
 
 concatter(i)
 ```
+## Final Hummingbird Footage
+[![Hummingbird Clips](https://i.postimg.cc/Nf494d23/Screen-Shot-2022-07-22-at-9-25-52-AM.png)](https://youtu.be/zh1UduzEdNM)
 
 [![Final Milestone](https://i.postimg.cc/x8F55dZz/Screen-Shot-2022-07-18-at-10-00-44-AM.png)](https://www.youtube.com/watch?v=EHuZAmJC9qU "Final Milestone")
 
