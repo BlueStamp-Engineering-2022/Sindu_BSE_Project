@@ -64,7 +64,7 @@ concat = False
 clips = []
 sub_clips = []
 # change based on number of frames
-num_of_frames = 263
+num_of_frames = 72
 ### Loop through the images
 for n in range(1, num_of_frames+1):
 	# Read the image
